@@ -1,3 +1,12 @@
+let user;
+
+describe('Simple login without faker', () => {
+    before(function () {
+        cy.task("freshUser").then((object) => {
+            user = object;
+        });
+    });
+
 it ('login_test', () => {
     cy.visit('https://react-redux.realworld.io/#/login?_k=uedmd4');
     cy.get(':nth-child(1) > .form-control').type('irko_birko@mail.com');
