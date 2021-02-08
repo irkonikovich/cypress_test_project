@@ -1,6 +1,6 @@
 let user;
 
-describe('Your Second Test', () => {
+describe('registartion with faker', () => {
     before(function () {
         cy.task("freshUser").then((object) => {
             user = object;
